@@ -1,0 +1,9 @@
+@baseUrl = http://localhost:8088
+
+# Agent with Hosted MCP Tool Example Request
+POST {{baseUrl}}/responses
+Content-Type: application/json
+ 
+{
+    "input": "Which Azure regions currently support Azure AI Foundry hosted agents?"
+}
