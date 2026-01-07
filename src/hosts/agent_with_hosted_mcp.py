@@ -22,7 +22,7 @@ client = AIProjectClient(
 
 # Create the agent from a container image
 agent = client.agents.create_version(
-    agent_name=agent_name,
+    agent_name=agent_name,    
     definition=ImageBasedHostedAgentDefinition(
         container_protocol_versions=[ProtocolVersionRecord(protocol=AgentProtocol.RESPONSES, version="v1")],
         cpu="1",
@@ -32,7 +32,7 @@ agent = client.agents.create_version(
             "AZURE_OPENAI_ENDPOINT": azure_openai_endpoint,
             "OPENAI_API_VERSION": openai_api_version,
             "AZURE_OPENAI_CHAT_DEPLOYMENT_NAME": model_name,
-        }
+        }        
     )
 )
 
