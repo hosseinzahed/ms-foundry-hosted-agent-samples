@@ -13,7 +13,7 @@ def create_agent():
         instructions="You are a helpful assistant that can help with microsoft documentation questions.",
         tools=HostedMCPTool(
             name="Microsoft Learn MCP",
-            url="https://learn.microsoft.com/api/mcp",
+            url="https://learn.microsoft.com/api/mcp",            
         ),
     )
     return agent
@@ -22,8 +22,8 @@ def create_agent():
 def main():
     # Run the agent as a hosted agent
     # Bind to HOST environment variable (0.0.0.0 in container) for probe accessibility
-    host = os.getenv("HOST", "127.0.0.1")
-    from_agent_framework(lambda _: create_agent()).run(host=host, port=8088)
+    # host = os.getenv("HOST", "127.0.0.1")
+    from_agent_framework(lambda _: create_agent()).run()
 
 
 if __name__ == "__main__":
