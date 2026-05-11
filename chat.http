@@ -5,5 +5,5 @@ POST {{baseUrl}}/responses
 Content-Type: application/json
  
 {
-    "input": "Which Azure regions currently support Azure AI Foundry hosted agents?"
+    "input": "Hi, who are you?"
 }
